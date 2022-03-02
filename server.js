@@ -212,7 +212,7 @@ function addEmployee() {
           (err, success) => {
             if (err) throw err;
             console.log(
-              `The new employee ${newEmployee.firstName} was added successfully to the company database!`
+              `The new employee ${new_employee.first_name} was added successfully to the company database!`
             );
             repeat();
           }
@@ -254,7 +254,7 @@ function updateEmployee() {
           });
           console.log(chosen_role.id);
           connection.query(
-            "UPDATE employees SET roleId=? where id=?",
+            "UPDATE employees SET role_id=? where id=?",
             [chosen_role.id, update_employee_id],
             function (err, res) {
               if (err) throw err;
